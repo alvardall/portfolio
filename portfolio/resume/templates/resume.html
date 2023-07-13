@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% load static %} {% block bodycontent %}
+
+
+  <main id="main">
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Courses</h3>
+            <div class="resume-item pb-0">
+              <h4>{{courses.0.program}}</h4>
+              <p><em>{{courses.0.program_name}}</em></p>
+              <p>
+              <ul>
+                
+                <li>{{courses.0.cours_name}}</li>
+                <li>{{courses.1.cours_name}}</li>
+                <li>{{courses.2.cours_name}}</li>              
+              </ul>
+              </p>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            {% for i in education %}
+            <div class="resume-item">
+              <h4>{{i.grade}} </h4>
+              <h5>{{i.start_date}} - {{i.end_date}}</h5>
+              <p><em>{{i.university_name}}</em></p>
+
+            </div>
+            {% endfor %}
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Work Experience</h3>
+            {% for i in experience %}
+            <div class="resume-item">
+              <h4>{{i.position_name}}</h4>
+              <h5>{{i.start_date}} - {{i.end_date}}</h5>
+              <p><em>{{i.company_name}}</em></p>
+
+            </div>
+            {% endfor %}
+            <div class="col-lg-6">
+              <h3 class="resume-title">Languages</h3>
+              
+              <div class="resume-item pb-0">
+
+                <p>
+                <ul>
+                  {% for i in language%}
+                  <li>{{i.name}}-{{i.level}}</li>
+                  {% endfor %}
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section><!-- End Resume Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock %}
