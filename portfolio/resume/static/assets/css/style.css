@@ -618,6 +618,10 @@ section {
   margin-bottom: 0;
 }
 
+.about img {
+  
+}
+
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
@@ -1277,11 +1281,16 @@ section {
   color: #222222;
   font-size: 14px;
   text-align: center;
+  width: 100%;
+  
 }
 
 #footer .credits {
   padding-top: 5px;
   font-size: 13px;
+  
+  
+
 }
 
 #footer .credits a {

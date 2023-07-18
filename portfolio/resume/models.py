@@ -1,8 +1,13 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator, EmailValidator
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
 # Create your models here.
 
 class PersonalInfo(models.Model):
+    
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     phone = models.CharField(max_length=30)
@@ -12,9 +17,9 @@ class PersonalInfo(models.Model):
     degree = models.CharField(max_length=30)
     freelance = models.CharField(max_length=30)
     
-
+    
     def __str__(self) -> str:
-        return f"{self.first_name} {self.last_name}, {self.phone}, {self.email}"
+        return f"{self.first_name}"
 
 class Skill(models.Model):
     name = models.TextField(max_length =20)

@@ -26,7 +26,8 @@ SECRET_KEY = 'c-q*u)uh0oqtie9aa47t!ucs3=+8nk#q**_et7(4+&t6f-o%jf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['alvardtelunts.pythonanywhere.com']
+ALLOWED_HOSTS = ['alvardtelunts.pythonanywhere.com', '127.0.0.1']
+
 
 
 # Application definition
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'resume',
 ]
 
