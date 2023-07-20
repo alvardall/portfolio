@@ -7,7 +7,7 @@ from .models import (Skill, Education, Experience,
 
 def home(request):
     social_links = SocialLink.objects.all()
-    personal_info = PersonalInfo.objects.first()
+    personal_info = PersonalInfo.objects.get(user__username = "admin")
     data_home = {
         "social_links": social_links,
         "personal_info": personal_info,
@@ -17,10 +17,10 @@ def home(request):
 
 
 def about(request):
-    skills = Skill.objects.all()
-    personal_info = PersonalInfo.objects.first()
-    facts = Fact.objects.all()
-    testimonials = Testimonial.objects.all()
+    skills = Skill.objects.filter(user__username = "admin")
+    personal_info = PersonalInfo.objects.get(user__username = "admin")
+    facts = Fact.objects.filter(user__username = "admin")
+    testimonials = Testimonial.objects.filter(user__username = "admin")
     data = {
         "skills": skills,
         "personal_info": personal_info,
@@ -31,15 +31,17 @@ def about(request):
 
 
 def resume(request):
-    education = Education.objects.all()
-    experience = Experience.objects.all()
-    language = Language.objects.all()
-    courses = Courses.objects.all()
+    education = Education.objects.filter(user__username = "admin")
+    experience = Experience.objects.filter(user__username = "admin")
+    language = Language.objects.filter(user__username = "admin")
+    courses = Courses.objects.filter(user__username = "admin")
+    personal_info = PersonalInfo.objects.get(user__username = "admin")
     data1 = {
         "courses": courses,
         "education": education,
         "experience": experience,
         "language": language,
+        "personal_info": personal_info,
     }
     return render(request, 'resume.html', data1)
 
@@ -53,4 +55,8 @@ def portfolio(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    personal_info = PersonalInfo.objects.get(user__username = "admin")
+    data_contact ={
+    "personal_info": personal_info,
+    }
+    return render(request, 'contact.html', data_contact )

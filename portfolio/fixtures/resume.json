@@ -1,0 +1,253 @@
+[
+    {
+        "model": "resume.personalinfo",
+        "pk": 5,
+        "fields": {
+            "website": "http://alvardtelunts.pythonanywhere.com/",
+            "phone": "+374 77441488",
+            "city": "Goris, Armenia",
+            "age": 39,
+            "degree": "Master",
+            "freelance": "Available",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 1,
+        "fields": {
+            "name": "Python",
+            "value": 70,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 2,
+        "fields": {
+            "name": "HTML",
+            "value": 60,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 3,
+        "fields": {
+            "name": "CSS",
+            "value": 70,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 4,
+        "fields": {
+            "name": "Linux",
+            "value": 70,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 5,
+        "fields": {
+            "name": "Django",
+            "value": 70,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 6,
+        "fields": {
+            "name": "GitHub",
+            "value": 80,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.courses",
+        "pk": 1,
+        "fields": {
+            "program": "WomenCoders",
+            "program_name": "AGBU empowerHer initiative the Women Cod",
+            "cours_name": "Python",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.courses",
+        "pk": 2,
+        "fields": {
+            "program": "WomenCoders",
+            "program_name": "AGBU empowerHer initiative the Women Cod",
+            "cours_name": "Linux",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.courses",
+        "pk": 3,
+        "fields": {
+            "program": "WomenCoders",
+            "program_name": "AGBU empowerHer initiative the Women Cod",
+            "cours_name": "Intro to IT Sector",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.education",
+        "pk": 1,
+        "fields": {
+            "university_name": "Goris State University",
+            "start_date": 2001,
+            "end_date": 2006,
+            "grade": "Master of  Biology and Chemistry",
+            "created_on": "2023-07-10T08:19:26.333Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.education",
+        "pk": 2,
+        "fields": {
+            "university_name": "Goris State University",
+            "start_date": 2010,
+            "end_date": 2012,
+            "grade": "Master  of Economics",
+            "created_on": "2023-07-10T08:19:26.333Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.experience",
+        "pk": 1,
+        "fields": {
+            "position_name": "Laborant and Lecturer",
+            "start_date": 2006,
+            "end_date": 2017,
+            "company_name": "Goris State University",
+            "created_on": "2023-07-10T20:34:31.726Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.experience",
+        "pk": 2,
+        "fields": {
+            "position_name": "Specialist of Beq Office",
+            "start_date": 2017,
+            "end_date": 2023,
+            "company_name": "Goris State University",
+            "created_on": "2023-07-10T20:34:31.726Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.language",
+        "pk": 1,
+        "fields": {
+            "name": "Armenian",
+            "level": "native",
+            "created_on": "2023-07-10T19:34:46.818Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.language",
+        "pk": 2,
+        "fields": {
+            "name": "English",
+            "level": "intermediate",
+            "created_on": "2023-07-10T19:36:03.554Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.language",
+        "pk": 3,
+        "fields": {
+            "name": "Russian",
+            "level": "good",
+            "created_on": "2023-07-10T19:36:38.129Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.sociallink",
+        "pk": 1,
+        "fields": {
+            "link": "https://www.facebook.com",
+            "link_name": "facebook",
+            "created_on": "2023-07-10T21:00:43.781Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.sociallink",
+        "pk": 2,
+        "fields": {
+            "link": "https://www.linkedin.com",
+            "link_name": "linkedin",
+            "created_on": "2023-07-10T21:01:58.582Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.sociallink",
+        "pk": 3,
+        "fields": {
+            "link": "https://twitter.com",
+            "link_name": "twitter",
+            "created_on": "2023-07-10T21:03:29.526Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.sociallink",
+        "pk": 4,
+        "fields": {
+            "link": "https://www.instagram.com/",
+            "link_name": "instagram",
+            "created_on": "2023-07-10T21:04:49.937Z",
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.fact",
+        "pk": 1,
+        "fields": {
+            "name": "Clients",
+            "number": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.fact",
+        "pk": 2,
+        "fields": {
+            "name": "Projects",
+            "number": 2,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.fact",
+        "pk": 3,
+        "fields": {
+            "name": "Hours Of Support",
+            "number": 0,
+            "user": 1
+        }
+    },
+    {
+        "model": "resume.fact",
+        "pk": 4,
+        "fields": {
+            "name": "Hard Workers",
+            "number": 0,
+            "user": 1
+        }
+    }
+]
