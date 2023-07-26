@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import (Skill, Education, Experience,
                      Language, SocialLink, PersonalInfo, Fact, Testimonial, Courses)
+from .forms import MessageForm
 # Create your views here.
 
 
@@ -55,8 +56,19 @@ def portfolio(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        print("POSTED DATA")
+        print(request.POST)
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("TELL them that sent data is not valid")
     personal_info = PersonalInfo.objects.get(user__username = "admin")
+    messageForm = MessageForm()
+    
     data_contact ={
     "personal_info": personal_info,
+    "messageForm": messageForm
     }
     return render(request, 'contact.html', data_contact )

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (Skill, Education, Experience,
-                    Language, SocialLink, PersonalInfo, Fact,Testimonial, Courses,  )
+                    Language, SocialLink, PersonalInfo, Fact,Testimonial, Courses, Message  )
 
 
 class EducationAdmin(admin.ModelAdmin):
@@ -49,3 +49,4 @@ admin.site.register(PersonalInfo)
 admin.site.register(Fact, FactAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(Courses)
+admin.site.register(Message)
