@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (Skill, Education, Experience,
-                    Language, SocialLink, PersonalInfo, Fact,Testimonial, Courses, Message  )
+                    Language, SocialLink, PersonalInfo, Fact, Testimonial, Courses, Message, PortfolioProject )
 
 
 class EducationAdmin(admin.ModelAdmin):
@@ -29,14 +29,12 @@ class SocialLinkAdmin(admin.ModelAdmin):
     list_display = ["link", "link_name", "created_on"]
 
 
-
-    
 class FactAdmin(admin.ModelAdmin):
     list_display = ["name", "number"]
 
+
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = ["name", "job_position", "created_on"]
-
 
 
 # Register your models here.
@@ -50,3 +48,5 @@ admin.site.register(Fact, FactAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(Courses)
 admin.site.register(Message)
+admin.site.register(PortfolioProject)
+

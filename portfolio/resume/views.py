@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import (Skill, Education, Experience,
-                     Language, SocialLink, PersonalInfo, Fact, Testimonial, Courses)
+                    Language, SocialLink, PersonalInfo, Fact, Testimonial, Courses, PortfolioProject)
 from .forms import MessageForm
+from django.shortcuts import get_object_or_404
+
 # Create your views here.
 
 
@@ -48,11 +50,17 @@ def resume(request):
 
 
 def services(request):
+    
     return render(request, 'services.html')
 
 
 def portfolio(request):
-    return render(request, 'portfolio.html')
+    portfolio_projects = PortfolioProject.objects.all()
+    data_portfolio = {
+        "portfolio_projects": portfolio_projects
+    }
+   
+    return render(request, 'portfolio.html', data_portfolio)
 
 
 def contact(request):
@@ -72,3 +80,9 @@ def contact(request):
     "messageForm": messageForm
     }
     return render(request, 'contact.html', data_contact )
+
+
+def portfolio_project(request):
+   
+    
+    return render(request, "portfolio-details.html")
