@@ -9,7 +9,10 @@
 
         <div class="section-title">
           <h2> Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>I am beginner Python programmer. I am at the initial stages of my coding journey, focusing on building
+            a strong foundation in programming concepts and gradually working my way towards more complex
+            and challenging projects. I have a Growth Mindset: I am enthusiastic and eager to learn. I am
+            understand that programming is a skill that requires practice and patience.</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -33,7 +36,7 @@
                 <p>{{pproject.short_description}}</p>
                 <div class="portfolio-links">
                   <a href="" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'resume:portfolio_project' %}" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="{% url 'resume:portfolio_project' pproject.id %}" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>

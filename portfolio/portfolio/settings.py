@@ -29,7 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['alvardtelunts.pythonanywhere.com', '127.0.0.1']
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -84,7 +83,7 @@ DATABASES = {
     }
 }
 
-
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 

@@ -82,7 +82,6 @@ def contact(request):
     return render(request, 'contact.html', data_contact )
 
 
-def portfolio_project(request):
-   
-    
-    return render(request, "portfolio-details.html")
+def portfolio_project(request, pk):
+    project = get_object_or_404(PortfolioProject, id=pk)
+    return render(request, "portfolio_details.html", context={"project": project})
