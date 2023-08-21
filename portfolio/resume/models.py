@@ -25,9 +25,9 @@ class Skill(models.Model):
         return f'{self.name} skill value is {self.value}'
 
 class Courses(models.Model):
-    program = models.TextField(max_length =40)
-    program_name = models.TextField(max_length =40)
-    cours_name = models.TextField(max_length =40)
+    program = models.TextField(max_length =60)
+    program_name = models.TextField(max_length =60)
+    cours_name = models.TextField(max_length =60)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
@@ -41,8 +41,10 @@ class Education(models.Model):
     end_date = models.IntegerField(
         validators=[MaxValueValidator(2023), MinValueValidator(1990)])
     grade = models.TextField(max_length=30, blank=True, null=True)
+    specialization = models.CharField(max_length=200, blank=True, null=True)
     created_on = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     
     def __str__(self) -> str:
         return f'{self.university_name}  {self.grade}'
@@ -55,8 +57,10 @@ class Experience(models.Model):
     end_date = models.IntegerField(
         validators=[MaxValueValidator(2023), MinValueValidator(1900)])
     company_name = models.TextField(max_length=70)
+    job_discription = models.TextField(max_length=1000, blank=True, null=True)
     created_on = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    
 
     def __str__(self) -> str:
         return f'{self.position_name} in {self. company_name}'
@@ -75,6 +79,7 @@ class SocialLink(models.Model):
     link_name = models.CharField(max_length=30)
     created_on = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    icon_name = models.CharField(max_length=30, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.link_name}"

@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="{% url 'resume:contact' %}" method="post" role="form" >
+            <form action="{% url 'resume:contact' %}" method="post" role="form" class="php-email-form">
               {% csrf_token %}
               <div class="row">
                 <div class="col-md-6 form-group">

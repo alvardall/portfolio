@@ -15,7 +15,7 @@
             projects.</p>
         </div>
         <div class="d-flex align-items-center justify-content-between mb-4">
-          <a style="background-color:rgb(35, 143, 123); border-color: rgb(104, 223, 201);;"class="btn btn-primary px-4 py-3" href="{% static 'assets/cv.pdf' %}" target="_blank">
+          <a style="background-color:rgb(35, 143, 123); border-color: rgb(104, 223, 201);;"class="btn btn-primary px-4 py-3" href="{% static 'assets/img/cv.pdf' %}" target="_blank">
               <div class="d-inline-block bi bi-download me-2"></div>
               Download My Resume
           </a>
@@ -53,6 +53,7 @@
               <h4>{{i.position_name}}</h4>
               <h5>{{i.start_date}} - {{i.end_date}}</h5>
               <p><em>{{i.company_name}}</em></p>
+              <p line-height:1.5>{{i.job_discription}}</p>
 
             </div>
             {% endfor %}

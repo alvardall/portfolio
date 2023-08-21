@@ -17,7 +17,7 @@
 
         <div class="row">
           <div class="col-lg-4">
-            <img src="{% static 'assets/img/nkar.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets/img/1.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>PYTHON PROGRAMMER</h3>
@@ -35,7 +35,7 @@
                 <ul>
                   <li><i class="bi bi-rounded-right"></i> <strong>Age:  </strong>{{personal_info.age}}</li>
                   <li><i class="bi bi-rounded-right"></i> <strong>Degree: </strong>{{personal_info.degree}}</li>
-                  <li><i class="bi bi-rounded-right"></i> <strong>Email: </strong>{{personal_info.user.email}}</li>
+                  <li><i class ="bi bi-rounded-right"></i> <strong>Email: </strong> <a href="mailto:{{personal_info.email}}">{{personal_info.user.email}}</a></li>
                   <li><i class="bi bi-rounded-right"></i> <strong>Freelance: </strong>{{personal_info.freelance}}</li>
                 </ul>
               </div>
@@ -45,7 +45,29 @@
               perseverance. I accept challenges and failures as opportunities to learn and improve. My desire to
               contribute and create innovative solutions will be valuable in the world of technology.
             </p>
+            <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row counters">
+          {% for fact in facts%}
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="{{fact.number}}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>{{fact.name}}</p>
           </div>
+          {% endfor%}
+          
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+          </div>
+          
         </div>
 
       </div>
@@ -83,27 +105,7 @@
       </div>
     </section><!-- End Skills Section -->
 
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row counters">
-          {% for fact in facts%}
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="{{fact.number}}" data-purecounter-duration="1" class="purecounter"></span>
-            <p>{{fact.name}}</p>
-          </div>
-          {% endfor%}
-          
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
+    
 
     
     <!-- ======= Testimonials Section ======= -->

@@ -421,13 +421,19 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/nkarhome.jpg") top right;
+  background: url("../img/4.jpg") top right;
   background-size: cover;
 }
 
 #hero .container {
-  padding-top: 70px;
   position: relative;
+  width: 400px;
+  height: 200px;
+
+}
+
+#hero .container h2 {
+  text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -621,6 +627,7 @@ section {
 .about img {
   
 }
+
 
 /*--------------------------------------------------------------
 # Skills
@@ -820,7 +827,7 @@ section {
   border: 2px solid #34b7a7;
 }
 
-.resume .btn .btn-primary{
+.resume .btn .btn-primary {
   background-color: #53b7aa;
 }
 
@@ -1289,15 +1296,15 @@ section {
   color: #222222;
   font-size: 14px;
   text-align: center;
-  
-  
+
+
 }
 
 #footer .credits {
   padding-top: 5px;
   font-size: 13px;
-  
-  
+
+
 
 }
 
